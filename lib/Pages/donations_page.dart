@@ -13,9 +13,7 @@ class _DonationsPageState extends State<DonationsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: ListView.builder(itemCount: 8, itemBuilder: (context, index) => ListTile(
-        title: InfoCard(),
-      )),
+      body: ListView.builder(itemCount: 8, itemBuilder: (context, index) => InfoCard()),
     );
   }
 
