@@ -1,6 +1,5 @@
+import 'package:donationsapp_assignment2/Pages/home_page.dart';
 import 'package:flutter/material.dart';
-
-import 'Pages/donations_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DonationsPage(),
+      home: HomePage(),
     );
   }
 }
-
-// Even a small contribution counts

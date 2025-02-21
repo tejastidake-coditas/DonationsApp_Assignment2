@@ -1,3 +1,4 @@
+import 'package:donationsapp_assignment2/utils/info_card.dart';
 import 'package:flutter/material.dart';
 
 class DonationsPage extends StatefulWidget {
@@ -12,6 +13,9 @@ class _DonationsPageState extends State<DonationsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
+      body: ListView.builder(itemCount: 8, itemBuilder: (context, index) => ListTile(
+        title: InfoCard(),
+      )),
     );
   }
 
@@ -35,12 +39,13 @@ class _DonationsPageState extends State<DonationsPage> {
       centerTitle: true,
       actions: [
         Card(
-            elevation: 0,
-            shape: CircleBorder(side: BorderSide(color: Colors.black12)),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Icon(Icons.more_horiz),
-            ))
+          elevation: 0,
+          shape: CircleBorder(side: BorderSide(color: Colors.black12)),
+          child: IconButton(
+            icon: Icon(Icons.more_horiz),
+            onPressed: () {},
+          ),
+        )
       ],
     );
   }
