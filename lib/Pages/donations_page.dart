@@ -13,7 +13,9 @@ class _DonationsPageState extends State<DonationsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: ListView.builder(itemCount: 8, itemBuilder: (context, index) => InfoCard()),
+      body: ListView.builder(
+          itemCount: 8,
+          itemBuilder: (context, index) => InfoCard(index: index)),
     );
   }
 
@@ -32,7 +34,10 @@ class _DonationsPageState extends State<DonationsPage> {
       ),
       title: Text(
         "My Donations",
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+        style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            color: Colors.brown[700]),
       ),
       centerTitle: true,
       actions: [
@@ -41,7 +46,11 @@ class _DonationsPageState extends State<DonationsPage> {
           shape: CircleBorder(side: BorderSide(color: Colors.black12)),
           child: IconButton(
             icon: Icon(Icons.more_horiz),
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  behavior: SnackBarBehavior.floating,
+                  content: Text("Feature will be available soon")));
+            },
           ),
         )
       ],
