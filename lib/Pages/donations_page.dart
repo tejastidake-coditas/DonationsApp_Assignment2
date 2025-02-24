@@ -1,3 +1,4 @@
+import 'package:donationsapp_assignment2/utils/data.dart';
 import 'package:donationsapp_assignment2/utils/info_card.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _DonationsPageState extends State<DonationsPage> {
     return Scaffold(
       appBar: buildAppBar(),
       body: ListView.builder(
-          itemCount: 8,
+          itemCount: cardData.length,
           itemBuilder: (context, index) => InfoCard(index: index)),
     );
   }
